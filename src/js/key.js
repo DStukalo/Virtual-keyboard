@@ -4,7 +4,13 @@ class KeyNumbers {
         this.functional = functional;
     }
     createKey(el) {
-        return '<div class="keybord-key">' + el["key"] + "</div>";
+        return (
+            '<div class="keybord-key"data="' +
+            el["code"] +
+            '">' +
+            el["key"] +
+            "</div>"
+        );
     }
 }
 
@@ -14,7 +20,13 @@ class KeyLetters {
         this.functional = functional;
     }
     createKey(el) {
-        return '<div class="keybord-key key-letters">' + el["eng"] + "</div>";
+        return (
+            '<div class="keybord-key key-letters" data="' +
+            el["code"] +
+            '">' +
+            el["eng"] +
+            "</div>"
+        );
     }
 }
 
@@ -24,7 +36,13 @@ class KeySpecial {
         this.functional = functional;
     }
     createKey(el) {
-        return '<div class="keybord-key key-spacial">' + el["btn"] + "</div>";
+        return (
+            '<div class="keybord-key key-spacial"data="' +
+            el["code"] +
+            '">' +
+            el["btn"] +
+            "</div>"
+        );
     }
 }
 
@@ -34,7 +52,13 @@ class KeySpace {
         this.functional = functional;
     }
     createKey(el) {
-        return '<div class="keybord-key key-space">' + el["key"] + "</div>";
+        return (
+            '<div class="keybord-key key-space"data="' +
+            el["code"] +
+            '">' +
+            el["key"] +
+            "</div>"
+        );
     }
 }
 class KeyShift {
@@ -43,7 +67,13 @@ class KeyShift {
         this.functional = functional;
     }
     createKey(el) {
-        return '<div class="keybord-key key-shift">' + el["key"] + "</div>";
+        return (
+            '<div class="keybord-key key-shift"data="' +
+            el["code"] +
+            '">' +
+            el["key"] +
+            "</div>"
+        );
     }
 }
 

@@ -41,11 +41,15 @@ document.addEventListener("keydown", (e) => {
         }
     }
     curKey.forEach((el) => {
-        if (el.textContent.toLowerCase() === e.key.toLowerCase()) {
+        if (el.getAttribute("data") === e.code) {
             el.classList.add("active");
-            console.log(e);
-            TEXTAREA.textContent += el.textContent;
-            if (el.className.includes("key-spacial")) {
+            console.log(el.getAttribute("data"));
+            // TEXTAREA.textContent += el.textContent;
+            if (
+                el.className.includes("key-letters") ||
+                el.className.includes("key-space")
+            ) {
+                TEXTAREA.textContent += el.textContent;
             }
         }
     });
@@ -68,7 +72,7 @@ document.addEventListener("keydown", (e) => {
 document.addEventListener("keyup", (e) => {
     let curKey = document.querySelectorAll(".keybord-key");
     curKey.forEach((el) => {
-        if (el.textContent.toLowerCase() === e.key.toLowerCase()) {
+        if (el.getAttribute("data") === e.code) {
             el.classList.remove("active");
         }
     });
