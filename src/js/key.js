@@ -1,80 +1,56 @@
-class KeyNumbers {
-    constructor(name, functional) {
+export default class Key {
+    constructor(engText, name, code, text, anotherText, shiftEng) {
+        this.engText = engText;
         this.name = name;
-        this.functional = functional;
+        this.code = code;
+        this.text = text;
+        this.anotherText = anotherText;
+        this.shiftEng = shiftEng;
+        // this.shiftUA = shiftUA;
     }
-    createKey(el) {
+    createKey() {
         return (
-            '<div class="keybord-key"data="' +
-            el["code"] +
+            '<div class="keybord-key key-' +
+            this.name +
+            '" data="' +
+            this.code +
+            '" data-shiftEng="' +
+            this.engText +
+            '" data-textEng="' +
+            this.shiftEng +
             '">' +
-            el["key"] +
+            this.engText +
             "</div>"
         );
     }
-}
 
-class KeyLetters {
-    constructor(name, functional) {
-        this.name = name;
-        this.functional = functional;
-    }
-    createKey(el) {
+    createShiftKey() {
         return (
-            '<div class="keybord-key key-letters" data="' +
-            el["code"] +
+            '<div class="keybord-key key-' +
+            this.name +
+            '" data="' +
+            this.code +
+            '" data-shiftEng="' +
+            this.engText +
+            '" data-textEng="' +
+            this.shiftEng +
             '">' +
-            el["eng"] +
+            this.shiftEng +
             "</div>"
         );
     }
-}
 
-class KeySpecial {
-    constructor(name, functional) {
-        this.name = name;
-        this.functional = functional;
-    }
-    createKey(el) {
+    createUAKey() {
         return (
-            '<div class="keybord-key key-spacial"data="' +
-            el["code"] +
+            '<div class="keybord-key key-' +
+            this.name +
+            '" data="' +
+            this.code +
+            '" data-shiftUA="' +
+            this.shiftUA +
             '">' +
-            el["btn"] +
+            this.uatext +
             "</div>"
         );
     }
 }
-
-class KeySpace {
-    constructor(name, functional) {
-        this.name = name;
-        this.functional = functional;
-    }
-    createKey(el) {
-        return (
-            '<div class="keybord-key key-space"data="' +
-            el["code"] +
-            '">' +
-            el["key"] +
-            "</div>"
-        );
-    }
-}
-class KeyShift {
-    constructor(name, functional) {
-        this.name = name;
-        this.functional = functional;
-    }
-    createKey(el) {
-        return (
-            '<div class="keybord-key key-shift"data="' +
-            el["code"] +
-            '">' +
-            el["key"] +
-            "</div>"
-        );
-    }
-}
-
-export { KeyLetters, KeyNumbers, KeySpecial, KeySpace, KeyShift };
