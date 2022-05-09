@@ -9,7 +9,9 @@
         "build:dev": "webpack --mode=development",
         "build:prod": "webpack --mode=production --node-env=production",
         "watch": "webpack --watch",
-        "start": "webpack serve"
+        "start": "webpack serve",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
     },
     "repository": {
         "type": "git",
@@ -21,7 +23,7 @@
     "bugs": {
         "url": "https://github.com/DStukalo/Virtual-keyboard/issues"
     },
-    "homepage": "https://github.com/DStukalo/Virtual-keyboard#readme",
+    "homepage": "https://github.com/DStukalo/Virtual-keyboard",
     "devDependencies": {
         "@babel/core": "^7.17.5",
         "@babel/preset-env": "^7.16.11",
@@ -31,6 +33,7 @@
         "eslint": "^8.14.0",
         "eslint-config-airbnb-base": "^15.0.0",
         "eslint-plugin-import": "^2.26.0",
+        "gh-pages": "^3.2.3",
         "html-webpack-plugin": "^5.5.0",
         "mini-css-extract-plugin": "^2.6.0",
         "sass": "^1.50.0",
