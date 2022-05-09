@@ -504,6 +504,5 @@ const ARR_KEYS = [
     shiftUA: '→',
   },
 ];
-// export { ARR_KEYS };
 
 export default ARR_KEYS;
