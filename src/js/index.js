@@ -8,16 +8,29 @@ createTemplate();
 export const keybord = document.querySelector(".keybord_area");
 const TEXTAREA = document.querySelector(".text_area");
 let lastLanguage = localStorage.getItem("app_lang") || "EN";
-// localStorage.setItem('app_lang', selectValue);
 let capslock = "off";
 let shift = "off";
 let cntrl = "off";
 let alt = "off";
 
-initKeys();
+console.log(lastLanguage);
+initKeys(lastLanguage);
 
 document.addEventListener("keydown", (e) => {
     let curKey = document.querySelectorAll(".keybord-key");
+    curKey.forEach((el) => {
+        if (el.getAttribute("data") === e.code) {
+            el.classList.add("active");
+            if (
+                el.className.includes("key-letters") ||
+                el.className.includes("key-space") ||
+                el.className.includes("key-number") ||
+                el.className.includes("key-symbol")
+            ) {
+                TEXTAREA.textContent += el.textContent;
+            }
+        }
+    });
     if (e.key === "CapsLock") {
         if (capslock === "on") {
             capslock = "off";
@@ -37,31 +50,54 @@ document.addEventListener("keydown", (e) => {
     }
     if (e.key === "Shift") {
         shift = "on";
-        console.log(shift);
+        // let curKey = document.querySelectorAll(".keybord-key");
+        // curKey.forEach((el) => {
+        //     if (el.getAttribute("data") === e.code) {
+        //         el.classList.add("active");
+        //     }
+        // });
         if (shift === "on") {
-            initShiftKeys();
+            initShiftKeys(lastLanguage);
         }
     }
-    // if (e.key === "Shift") {
-    //     shift = "on";
-    //     console.log(shift);
-    //     if (shift === "on") {
-    //         initShiftKeys();
-    //     }
-    // }
-    curKey.forEach((el) => {
-        if (el.getAttribute("data") === e.code) {
-            el.classList.add("active");
-            if (
-                el.className.includes("key-letters") ||
-                el.className.includes("key-space") ||
-                el.className.includes("key-number") ||
-                el.className.includes("key-symbol")
-            ) {
-                TEXTAREA.textContent += el.textContent;
+    if (e.key === "Control") {
+        cntrl = "on";
+        if (alt === "on") {
+            let curLang = lastLanguage;
+            if (lastLanguage === "EN") {
+                curLang = "UA";
+                lastLanguage = curLang;
+                localStorage.setItem("app_lang", curLang);
+                initKeys(lastLanguage);
+            } else {
+                curLang = "EN";
+                lastLanguage = curLang;
+                localStorage.setItem("app_lang", curLang);
+                initKeys(lastLanguage);
             }
         }
-    });
+    }
+    if (e.key === "Alt") {
+        alt = "on";
+        e.preventDefault();
+        if (cntrl === "on") {
+            let curLang = lastLanguage;
+            if (lastLanguage === "EN") {
+                curLang = "UA";
+                lastLanguage = curLang;
+                localStorage.setItem("app_lang", curLang);
+                initKeys(lastLanguage);
+            } else {
+                curLang = "EN";
+                lastLanguage = curLang;
+                localStorage.setItem("app_lang", curLang);
+                initKeys(lastLanguage);
+            }
+        }
+    }
+    if (e.key === "Tab") {
+        e.preventDefault();
+    }
 });
 
 document.addEventListener("keyup", (e) => {
@@ -72,7 +108,13 @@ document.addEventListener("keyup", (e) => {
         }
         if (e.key === "Shift") {
             shift = "off";
-            initKeys();
+            initKeys(lastLanguage);
+        }
+        if (e.key === "Control") {
+            cntrl = "off";
+        }
+        if (e.key === "Alt") {
+            alt = "off";
         }
     });
 });

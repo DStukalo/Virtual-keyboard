@@ -1,14 +1,13 @@
 export default class Key {
-    constructor(engText, name, code, text, anotherText, shiftEng) {
+    constructor(engText, name, code, uaText, shiftEng, shiftUA) {
         this.engText = engText;
         this.name = name;
         this.code = code;
-        this.text = text;
-        this.anotherText = anotherText;
+        this.uaText = uaText;
         this.shiftEng = shiftEng;
-        // this.shiftUA = shiftUA;
+        this.shiftUA = shiftUA;
     }
-    createKey() {
+    createENGKey() {
         return (
             '<div class="keybord-key key-' +
             this.name +
@@ -24,7 +23,7 @@ export default class Key {
         );
     }
 
-    createShiftKey() {
+    createENGShiftKey() {
         return (
             '<div class="keybord-key key-' +
             this.name +
@@ -47,9 +46,27 @@ export default class Key {
             '" data="' +
             this.code +
             '" data-shiftUA="' +
+            this.uaText +
+            '" data-textUA="' +
             this.shiftUA +
             '">' +
-            this.uatext +
+            this.uaText +
+            "</div>"
+        );
+    }
+
+    createUAShiftKey() {
+        return (
+            '<div class="keybord-key key-' +
+            this.name +
+            '" data="' +
+            this.code +
+            '" data-shiftUA="' +
+            this.uaText +
+            '" data-textUA="' +
+            this.shiftUA +
+            '">' +
+            this.shiftUA +
             "</div>"
         );
     }

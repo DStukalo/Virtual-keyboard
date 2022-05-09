@@ -125,6 +125,7 @@ const ARR_KEYS = [
         code: "KeyQ",
         uaText: "й",
         shiftEng: "Q",
+        shiftUA: "Й",
     },
     {
         engText: "w",
@@ -132,6 +133,7 @@ const ARR_KEYS = [
         code: "KeyW",
         uaText: "ц",
         shiftEng: "W",
+        shiftUA: "Ц",
     },
     {
         engText: "e",
@@ -139,6 +141,7 @@ const ARR_KEYS = [
         code: "KeyE",
         uaText: "у",
         shiftEng: "E",
+        shiftUA: "У",
     },
     {
         engText: "r",
@@ -146,6 +149,7 @@ const ARR_KEYS = [
         code: "KeyR",
         uaText: "к",
         shiftEng: "R",
+        shiftUA: "К",
     },
     {
         engText: "t",
@@ -153,6 +157,7 @@ const ARR_KEYS = [
         code: "KeyT",
         uaText: "е",
         shiftEng: "T",
+        shiftUA: "Е",
     },
     {
         engText: "y",
@@ -160,6 +165,7 @@ const ARR_KEYS = [
         code: "KeyY",
         uaText: "н",
         shiftEng: "Y",
+        shiftUA: "Н",
     },
     {
         engText: "u",
@@ -167,6 +173,7 @@ const ARR_KEYS = [
         code: "KeyU",
         uaText: "г",
         shiftEng: "U",
+        shiftUA: "Г",
     },
     {
         engText: "i",
@@ -174,6 +181,7 @@ const ARR_KEYS = [
         code: "KeyI",
         uaText: "ш",
         shiftEng: "I",
+        shiftUA: "Ш",
     },
     {
         engText: "o",
@@ -181,6 +189,7 @@ const ARR_KEYS = [
         code: "KeyO",
         uaText: "щ",
         shiftEng: "O",
+        shiftUA: "Щ",
     },
     {
         engText: "p",
@@ -188,6 +197,7 @@ const ARR_KEYS = [
         code: "KeyP",
         uaText: "з",
         shiftEng: "P",
+        shiftUA: "З",
     },
     {
         engText: "[",
@@ -227,6 +237,7 @@ const ARR_KEYS = [
         code: "KeyA",
         uaText: "ф",
         shiftEng: "A",
+        shiftUA: "Ф",
     },
     {
         engText: "s",
@@ -234,6 +245,7 @@ const ARR_KEYS = [
         code: "KeyS",
         uaText: "і",
         shiftEng: "S",
+        shiftUA: "І",
     },
     {
         engText: "d",
@@ -241,6 +253,7 @@ const ARR_KEYS = [
         code: "KeyD",
         uaText: "в",
         shiftEng: "D",
+        shiftUA: "В",
     },
     {
         engText: "f",
@@ -248,6 +261,7 @@ const ARR_KEYS = [
         code: "KeyF",
         uaText: "а",
         shiftEng: "F",
+        shiftUA: "А",
     },
     {
         engText: "g",
@@ -255,6 +269,7 @@ const ARR_KEYS = [
         code: "KeyG",
         uaText: "п",
         shiftEng: "G",
+        shiftUA: "П",
     },
     {
         engText: "h",
@@ -262,6 +277,7 @@ const ARR_KEYS = [
         code: "KeyH",
         uaText: "р",
         shiftEng: "H",
+        shiftUA: "Р",
     },
     {
         engText: "j",
@@ -269,6 +285,7 @@ const ARR_KEYS = [
         code: "KeyJ",
         uaText: "о",
         shiftEng: "J",
+        shiftUA: "О",
     },
     {
         engText: "k",
@@ -276,6 +293,7 @@ const ARR_KEYS = [
         code: "KeyK",
         uaText: "л",
         shiftEng: "K",
+        shiftUA: "Л",
     },
     {
         engText: "l",
@@ -283,6 +301,7 @@ const ARR_KEYS = [
         code: "KeyL",
         uaText: "д",
         shiftEng: "L",
+        shiftUA: "Д",
     },
     {
         engText: ";",
@@ -322,6 +341,7 @@ const ARR_KEYS = [
         code: "KeyZ",
         uaText: "я",
         shiftEng: "Z",
+        shiftUA: "Я",
     },
     {
         engText: "x",
@@ -329,6 +349,7 @@ const ARR_KEYS = [
         code: "KeyX",
         uaText: "ч",
         shiftEng: "X",
+        shiftUA: "Ч",
     },
     {
         engText: "c",
@@ -336,6 +357,7 @@ const ARR_KEYS = [
         code: "KeyC",
         uaText: "с",
         shiftEng: "C",
+        shiftUA: "С",
     },
     {
         engText: "v",
@@ -343,6 +365,7 @@ const ARR_KEYS = [
         code: "KeyV",
         uaText: "м",
         shiftEng: "V",
+        shiftUA: "М",
     },
     {
         engText: "b",
@@ -350,6 +373,7 @@ const ARR_KEYS = [
         code: "KeyB",
         uaText: "и",
         shiftEng: "B",
+        shiftUA: "И",
     },
     {
         engText: "n",
@@ -357,6 +381,7 @@ const ARR_KEYS = [
         code: "KeyN",
         uaText: "т",
         shiftEng: "N",
+        shiftUA: "Т",
     },
     {
         engText: "m",
@@ -364,6 +389,7 @@ const ARR_KEYS = [
         code: "KeyM",
         uaText: "ь",
         shiftEng: "M",
+        shiftUA: "Ь",
     },
     {
         engText: ",",
