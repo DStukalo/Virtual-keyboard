@@ -1,0 +1,30 @@
+@import "./components/keys";
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.text_area {
+    margin-bottom: 30px;
+    display: block;
+    width: 680px;
+    height: 300px;
+    border: 2px solid #000;
+}
+.keybord_area {
+    box-sizing: border-box;
+    padding: 10px;
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border: 1px solid #000;
+    background-color: #000;
+}
+
+.heading {
+    font-size: 32px;
+    font-style: italic;
+}

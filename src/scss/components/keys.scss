@@ -1,0 +1,40 @@
+.keybord-key {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #000;
+    margin-bottom: 2px;
+    transform: all 2s ease 1s;
+    background-color: #fff;
+    font-size: 18px;
+    min-width: 25px;
+}
+
+.clearfix {
+    display: block;
+    width: 100%;
+    clear: both;
+}
+
+.active {
+    transform: all 2s ease 1s;
+    background-color: olive;
+    border: 1px solid darkgray;
+    color: #fff;
+    border-radius: 15px;
+}
+
+.key-space {
+    width: 320px;
+}
+
+.key-shift {
+    width: 80px;
+}
+
+.key-letters {
+    width: 20px;
+}
+
+.hover {
+    background-color: bisque;
+}
