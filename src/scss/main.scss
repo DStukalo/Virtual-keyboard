@@ -4,7 +4,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // background-color: olive;
 }
 
 .text_area {
@@ -23,4 +22,9 @@ body {
     justify-content: space-around;
     border: 1px solid #000;
     background-color: #000;
+}
+
+.heading {
+    font-size: 32px;
+    font-style: italic;
 }
